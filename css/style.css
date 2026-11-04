@@ -1,581 +1,180 @@
-<style>
+/* ---------- base ---------- */
+
 body {
-  background-color:#E7E9EB;
-}
-/* background */
-#background {
-  background-color:#4d3626;
-}
-
-/* box logo */
-#logo {
-  position:relative;
-  display: flex;
-  width:85px;
-  height:85px;
-  padding:10px;
-  background-color:#6f4e37;
-  left: 0px;
-  font-size: 20px;
+  background-color: #4d3626;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  color: white;
 }
 
-/* box background */
-#box {
-  position:relative;
-  display: flex;
-  align-items: center;
-  width:68px;
-  height:68px;
-  padding:10px;
-  background-color:#6f4e37;
-  left: 7.5px;
-  font-size: 15px;
-  text-align: center;
-  justify-content: center;
-  color: white;
-}
+img { vertical-align: top; }
 
-/* box home */
+/* ---------- side navigation (shared by every page) ---------- */
 
-#box1{
+.sidenav {
   position: fixed;
-  width: 550px;
-  height: 400px;
-  left:775px;
-  bottom: 300px;
-  background-color: #8b715e;
+  z-index: 1;
+  top: 350px;
+  left: 10px;
+  width: 140px;
+  padding: 8px 0;
+  background: #6f4e37;
+  overflow-x: hidden;
 }
 
-#ceo1{
-  position: fixed;
-  left: 650px;
-  bottom: 150px;
+.sidenav a {
+  display: block;
+  padding: 6px 8px 6px 16px;
+  font-size: 25px;
+  color: #37271b;
+  text-decoration: none;
 }
 
-#ceo2{
-  position: fixed;
-  left: 1050px;
-  bottom: 500px;
+.sidenav a:hover { color: #000; }
+
+@media screen and (max-height: 450px) {
+  .sidenav { padding-top: 15px; }
+  .sidenav a { font-size: 18px; }
 }
 
-#ceoTXT{
-  position: fixed;
+/* ---------- shared building blocks ---------- */
+
+/* every page element below is pinned in place */
+.panel, .photo, .title, .text, .tab, .field, .link-tab, .link-box { position: fixed; }
+
+/* plain coloured rectangle */
+.panel { background-color: #8b715e; }
+
+/* big heading */
+.title {
   width: 400px;
-  height: -300px;
-  left: 635px;
-  bottom: 550px;
-  font-size: 65px;
-  text-align: right;
-} 
-
-#ceoTXT2{
-  position: fixed;
-  width: 600px;
-  height: 300px;
-  left: 1000px;
-  bottom: 175px;
-  font-size: 30px;
-  text-align: left;
-  border: ;
-} 
-
-#box3{
-  position: fixed;
-  width: 550px;
-  height: 650px;
-  left: 900px;
-  bottom: 200px;
-  background-color: #7d5f4b;
-}
-
-#box2{
-  position: fixed;
-  width: 550px;
-  height: 700px;
-  left: 475px;
-  bottom: 100px;
-  background-color: #8b715e;
-}
-
-#employee1{
-  position: fixed;
-  left: 440px;
-  bottom: 600px;
-}
-
-#employee2{
-  position: fixed;
-  left: 1250px;
-  bottom: 160px;
-}
-
-#ceoTXT3{
-  position: fixed;
-  width: 400px;
-  height: -300px;
-  left: 700px;
-  bottom: 600px;
   font-size: 55px;
   text-align: left;
-} 
+}
 
-#ceoTXT4{
-  position: fixed;
+/* paragraph block */
+.text {
   width: 500px;
   height: 300px;
-  left: 500px;
-  bottom: 290px;
   font-size: 30px;
   text-align: left;
-  border: ;
-} 
-
-#ceoTXT5{
-  position: fixed;
-  width: 500px;
-  height: 300px;
-  left: 930px;
-  bottom: 395px;
-  font-size: 30px;
-  text-align: left;
-  border: ;
-} 
-
-#ceoTXT6{
-  position: fixed;
-  width: 400px;
-  height: -300px;
-  left: 1010px;
-  bottom: 710px;
-  font-size: 55px;
-  text-align: right;
-} 
-
-#box4{
-  position: fixed;
-  width: 1750px;
-  height: 600px;
-  left: 255px;
-  bottom: 100px;
-  background-color: #422e21;
 }
 
-#box5{
-  position: fixed;
-  width: 1500px;
-  height: 450px;
-  left: 305px;
-  bottom: 350px;
-  background-color: #583e2c;
-}
-
-#boxUP1{
-  position: fixed;
-  width: 450px;
-  height: 300px;
-  left: 320px;
-  bottom: 450px;
-  background-color: #8b715e;
-}
-
-#boxDOWN1{
-  position: fixed;
-  width: 450px;
-  height: 300px;
-  left: 770px;
-  bottom: 150px;
-  background-color: #8b715e;
-}
-
-#boxUP2{
-  position: fixed;
-  width: 450px;
-  height: 300px;
-  left: 1220px;
-  bottom: 450px;
-  background-color: #8b715e;
-}
-
-#boxDOWN2{
-  position: fixed;
-  width: 450px;
-  height: 300px;
-  left: 1670px;
-  bottom: 150px;
-  background-color: #8b715e;
-}
-
-#ceoTXT7{
-  position: fixed;
-  width: 400px;
-  height: -300px;
-  left: 340px;
-  bottom: 620px;
-  font-size: 55px;
-  text-align: left;
-} 
-
-#ceoTXT8{
-  position: fixed;
-  width: 500px;
-  height: 300px;
-  left: 333px;
-  bottom: 315px;
-  font-size: 30px;
-  text-align: left;
-  border: ;
-} 
-
-#ceoTXT9{
-  position: fixed;
-  width: 500px;
-  height: 300px;
-  left: 780px;
-  bottom: 450px;
-  font-size: 30px;
-  text-align: left;
-  border: ;
-} 
-
-#ceoTXT10{
-  position: fixed;
-  width: 500px;
-  height: 300px;
-  left: 785px;
-  bottom: 150px;
-  font-size: 55px;
-  text-align: left;
-  border: ;
-} 
-
-#ceoTXT11{
-  position: fixed;
-  width: 500px;
-  height: 300px;
-  left: 780px;
-  bottom: 20px;
-  font-size: 30px;
-  text-align: left;
-  border: ;
-} 
-
-#ceoTXT12{
-  position: fixed;
-  width: 400px;
-  height: -300px;
-  left: 1240px;
-  bottom: 620px;
-  font-size: 55px;
-  text-align: left;
-} 
-
-#ceoTXT13{
-  position: fixed;
-  width: 500px;
-  height: 300px;
-  left: 1230px;
-  bottom: 315px;
-  font-size: 30px;
-  text-align: left;
-  border: ;
-} 
-
-input[type=text] {
-  width: 20%;
-}
-
-/* birthday */
-
-
-
-#box6{
-  position: fixed;
+/* application: little label tab + the input box it sits on */
+.tab {
   width: 60px;
   height: 25px;
-  left: 475px;
-  top: 190px;
   background-color: #8b715e;
-  text-align: center;
-  padding: 1px;	
 }
 
-#box7{
-  position: fixed;
+.field { background-color: #6f4e37; }
+
+/* links: small name tab + big link box */
+.link-tab {
   width: 210px;
   height: 55px;
-  left: 490px;
-  top: 200px;
-  background-color: #6f4e37;
-  text-align: centre;
-  border: 3px;
-}
-
-/* name */
-
-#box8{
-  position: fixed;
-  width: 60px;
-  height: 25px;
-  left: 600px;
-  top: 360px;
+  padding: 5px;
   background-color: #8b715e;
-  text-align: center;
+  font-size: 30px;
+  text-align: left;
 }
 
-#box9{
-  position: fixed;
-  width: 600px;
-  height: 55px;
-  left: 610px;
-  top: 370px;
+.link-box {
+  width: 450px;
+  height: 300px;
   background-color: #6f4e37;
-  text-align: centre;
-  border: 3px;
+  font-size: 50px;
 }
 
-/* job title */
+/* ---------- home ---------- */
 
-#box10{
-  position: fixed;
-  width: 60px;
-  height: 25px;
-  left: 1300px;
-  top: 360px;
-  background-color: #8b715e;
-  text-align: center;
-}
+#box1    { left: 775px;  bottom: 300px; width: 550px; height: 400px; }
+#ceo1    { left: 650px;  bottom: 150px; }
+#ceo2    { left: 1050px; bottom: 500px; }
+#ceoTXT  { left: 635px;  bottom: 550px; font-size: 65px; text-align: right; }
+#ceoTXT2 { left: 1000px; bottom: 175px; width: 600px; }
 
-#box11{
-  position: fixed;
-  width: 250px;
-  height: 55px;
-  left: 1310px;
-  top: 370px;
-  background-color: #6f4e37;
-  text-align: centre;
-  border: 3px;
-}
+/* ---------- profiles ---------- */
 
-/* address */
+#box2      { left: 475px;  bottom: 100px; width: 550px; height: 700px; }
+#box3      { left: 900px;  bottom: 200px; width: 550px; height: 650px; background-color: #7d5f4b; }
+#employee1 { left: 440px;  bottom: 600px; }
+#employee2 { left: 1250px; bottom: 160px; }
+#ceoTXT3   { left: 700px;  bottom: 600px; }
+#ceoTXT4   { left: 500px;  bottom: 290px; }
+#ceoTXT5   { left: 930px;  bottom: 395px; }
+#ceoTXT6   { left: 1010px; bottom: 710px; text-align: right; }
 
-#box12{
-  position: fixed;
-  width: 60px;
-  height: 25px;
-  left: 1000px;
-  top: 140px;
-  background-color: #8b715e;
-  text-align: center;
-}
+/* ---------- jobs ---------- */
 
-#box13{
-  position: fixed;
-  width: 600px;
-  height: 100px;
-  left: 1010px;
-  top: 150px;
-  background-color: #6f4e37;
-  text-align: center;
-  border: 3px;
-}
+#box4     { left: 255px;  bottom: 100px; width: 1750px; height: 600px; background-color: #422e21; }
+#box5     { left: 305px;  bottom: 350px; width: 1500px; height: 450px; background-color: #583e2c; }
+.job      { width: 450px; height: 300px; }
+#boxUP1   { left: 320px;  bottom: 450px; }
+#boxDOWN1 { left: 770px;  bottom: 150px; }
+#boxUP2   { left: 1220px; bottom: 450px; }
+#boxDOWN2 { left: 1670px; bottom: 150px; }
+#ceoTXT7  { left: 340px;  bottom: 620px; }
+#ceoTXT8  { left: 333px;  bottom: 315px; }
+#ceoTXT9  { left: 780px;  bottom: 450px; }
+#ceoTXT10 { left: 785px;  bottom: 150px; width: 500px; height: 300px; }
+#ceoTXT11 { left: 780px;  bottom: 20px; }
+#ceoTXT12 { left: 1240px; bottom: 620px; }
+#ceoTXT13 { left: 1230px; bottom: 315px; }
 
-/* contact */
+/* ---------- application ---------- */
 
-#box14{
-  position: fixed;
-  width: 60px;
-  height: 25px;
-  left: 400px;
-  top: 530px;
-  background-color: #8b715e;
-  text-align: center;
-}
-
-#box15{
-  position: fixed;
-  width: 300px;
-  height: 80px;
-  left: 410px;
-  top: 540px;
-  background-color: #6f4e37;
-  text-align: center;
-  border: 3px;
-}
-
-/* cv */
-
-#box16{
-  position: fixed;
-  width: 60px;
-  height: 25px;
-  left: 900px;
-  top: 580px;
-  background-color: #8b715e;
-  text-align: center;
-}
-
-#box17{
-  position: fixed;
-  width: 800px;
-  height: 200px;
-  left: 910px;
-  top: 590px;
-  background-color: #6f4e37;
-  text-align: center;
-  border: 3px;
-}
-
-/* submit */
+#box6  { left: 475px;  top: 190px; padding: 1px; }  /* birthday */
+#box7  { left: 490px;  top: 200px; width: 210px; height: 55px; }
+#box8  { left: 600px;  top: 360px; }                /* name */
+#box9  { left: 610px;  top: 370px; width: 600px; height: 55px; }
+#box9 input { width: 20%; box-sizing: border-box; }
+#box10 { left: 1300px; top: 360px; }                /* job title */
+#box11 { left: 1310px; top: 370px; width: 250px; height: 55px; }
+#box12 { left: 1000px; top: 140px; }                /* address */
+#box13 { left: 1010px; top: 150px; width: 600px; height: 100px; }
+#box14 { left: 400px;  top: 530px; }                /* contact */
+#box15 { left: 410px;  top: 540px; width: 300px; height: 80px; }
+#box16 { left: 900px;  top: 580px; }                /* cv */
+#box17 { left: 910px;  top: 590px; width: 800px; height: 200px; }
 
 .button {
-  background-color: #6f4e37; /* brown */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
-  font-size: 16px;
   margin: 4px 2px;
+  padding: 15px 32px;
+  border: none;
+  background-color: #6f4e37;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
 }
 
-/* khan academy */
-
-#box18{
-  position: fixed;
-  width: 210px;
-  height: 55px;
-  left: 850px;
-  top: 150px;
-  background-color: #8b715e;
-  text-align: right;
-  border: 5px;
-  font-size: 30px;
-  padding: 5px;
-}
-
-#box19{
-  position: fixed;
-  width: 450px;
-  height: 300px;
-  left: 420px;
-  bottom: 500px;
-  background-color: #6f4e37;
-  font-size: 50px;
-}
-
-/* cisco */
-
-#box20{
-  position: fixed;
-  width: 210px;
-  height: 55px;
-  left: 920px;
-  top: 290px;
-  background-color: #8b715e;
-  text-align: left;
-  border: 5px;
-  font-size: 30px;
-  padding: 5px;
-}
-
-#box21{
-  position: fixed;
-  width: 450px;
-  height: 300px;
-  left: 1110px;
-  bottom: 500px;
-  background-color: #6f4e37;
-  font-size: 50px;
-}
-
-/* w3schools */
-
-#box22{
-  position: fixed;
-  width: 210px;
-  height: 55px;
-  left: 900px;
-  top: 500px;
-  background-color: #8b715e;
-  text-align: left;
-  border: 5px;
-  font-size: 30px;
-  padding: 5px;
-}
-
-#box23{
-  position: fixed;
-  width: 450px;
-  height: 300px;
-  left: 1110px;
-  bottom: 150px;
-  background-color: #6f4e37;
-  font-size: 50px;
-}
-
-/* flower shop */
-
-#box24{
-  position: fixed;
-  width: 210px;
-  height: 55px;
-  left: 850px;
-  top: 650px;
-  background-color: #8b715e;
-  text-align: right;
-  border: 5px;
-  font-size: 25px;
-  padding: 5px;
-}
-
-#box25{
-  position: fixed;
-  width: 450px;
-  height: 300px;
-  left: 420px;
-  bottom: 150px;
-  background-color: #6f4e37;
-  font-size: 50px;
-}
-
-
 .drop-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 750px;
   height: 100px;
   padding: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-family: ;
-  font-weight: 500;
-  font-size: 20px;
-  cursor: pointer;
-  color: #cccccc;
   border: 4px dashed #8b715e;
   border-radius: 10px;
+  color: #ccc;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
 }
-.drop-zone--over {
-  border-style: solid;
-}
-.drop-zone__input {
-  display: none;
-}
+
+.drop-zone--over { border-style: solid; }
+.drop-zone__input { display: none; }
+
 .drop-zone__thumb {
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #cccccc;
+  background-color: #ccc;
   background-size: cover;
-  position: relative;
 }
+
 .drop-zone__thumb::after {
   content: attr(data-label);
   position: absolute;
@@ -583,12 +182,18 @@ input[type=text] {
   left: 0;
   width: 100%;
   padding: 5px 0;
-  color: #ffffff;
   background: rgba(0, 0, 0, 0.75);
+  color: #fff;
   font-size: 14px;
-  text-align: center;
 }
 
+/* ---------- links ---------- */
 
-
-</style>
+#box18 { left: 850px;  top: 150px; text-align: right; }   /* cisco */
+#box19 { left: 420px;  bottom: 500px; }
+#box20 { left: 920px;  top: 290px; }                      /* khan academy */
+#box21 { left: 1110px; bottom: 500px; }
+#box22 { left: 900px;  top: 500px; }                      /* w3schools */
+#box23 { left: 1110px; bottom: 150px; }
+#box24 { left: 850px;  top: 650px; text-align: right; font-size: 25px; }  /* flower shop */
+#box25 { left: 420px;  bottom: 150px; }

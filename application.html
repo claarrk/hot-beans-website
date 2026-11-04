@@ -1,0 +1,137 @@
+<html>
+<head>
+<link rel="stylesheet" href="css\style.css">
+<script src="javascript\drag.js"></script>
+<title>Hot beans</title>
+<div id="background">
+<style>
+body {
+  font-family: "null";
+}
+
+.sidenav {
+  width: 140;
+  position: fixed;
+  z-index: 1;
+  top: 350px;
+  left: 10px;
+  background: #6f4e37;
+  overflow-x: hidden;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #37271b;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #000000;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <img src="images/hotbeanlogo.png" width="100" height="100">
+  <a href="index.html">home</a>
+  <a href="profiles.html">profiles</a>
+  <a href="jobs.html">jobs</a>
+  <a href="application.html">application</a>
+  <a href="links.html">links</a>
+</div>
+
+
+
+
+</head>
+
+<body style="background-color:#4d3626;text-align:center">
+
+
+
+<div id="box7">
+<br><label for="birthday"></label>
+  <input type="date" id="birthday" name="birthday">
+  <input type="submit">
+
+</div>
+
+<div id="box6">birthday</div>
+
+<div id="box9">
+<br>
+first name <input type="text" id="fname" name="fname">
+middle name <input type="text" id="mname" name="mname">
+surname <input type="text" id="sname" name="sname">
+</div>
+
+<div id="box8">name</div>
+
+<div id="box11">
+<br>
+<label for="jobtitle">choose a job:</label>
+  <select name="cars" id="cars">
+    <option value="projectmanager">project manager</option>
+    <option value="softwareengineer">software engineer</option>
+    <option value="websitedeveloper">website developer</option>
+  </select>
+</div>
+
+<div id="box10">job title</div>
+
+<div id="box13">
+<br><form>
+  street address <input type="address" id="fline" name="fline">
+  street address line 2 <input type="address" id="sline" name="sline">
+  state/province <input type="address" id="state" name="provice">
+  postal/zipcode <input type="address" id="zipcode" name="zipcode">
+  <br>
+  country <input type="address" id="country" name="country">
+  city <input type="address" id="city" name="city">
+  
+</form></div>
+<div id="box12">address</div>
+
+<div id="box15">
+<br>
+phone number <input type="tel" id="tel" name="tel">
+email address <input type="email" id="fname" name="fname">
+</div>
+
+
+<div id="box14">contact</div>
+
+<div id="box17">
+<br>
+
+<div class="drop-zone">
+<span class="drop-zone__prompt">drop</span>
+<input type="file" name="myFile" class="drop-zone__input">
+</div>
+
+
+<div id="box16">cv</div>
+
+<button class="button">submit</button>
+
+</body>
+
+
+
+</html>

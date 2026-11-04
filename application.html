@@ -1,137 +1,198 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="css\style.css">
-<script src="javascript\drag.js"></script>
-<title>Hot beans</title>
-<div id="background">
-<style>
-body {
-  font-family: "null";
-}
-
-.sidenav {
-  width: 140;
-  position: fixed;
-  z-index: 1;
-  top: 350px;
-  left: 10px;
-  background: #6f4e37;
-  overflow-x: hidden;
-  padding: 8px 0;
-  text-align: center;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #37271b;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #000000;
-}
-
-.main {
-  margin-left: 140px; /* Same width as the sidebar + left position in px */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hot Beans — Apply</title>
+  <meta name="description" content="Apply for a role at Hot Beans.">
+  <link rel="icon" href="images/hotbeanlogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="javascript/site.js" defer></script>
+  <script src="javascript/dropzone.js" defer></script>
+  <script src="javascript/draggable.js" defer></script>
+  <script src="javascript/application.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<div class="sidenav">
-  <img src="images/hotbeanlogo.png" width="100" height="100">
-  <a href="index.html">home</a>
-  <a href="profiles.html">profiles</a>
-  <a href="jobs.html">jobs</a>
-  <a href="application.html">application</a>
-  <a href="links.html">links</a>
-</div>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html"><img src="images/hotbeanlogo.png" alt="" width="40" height="40">Hot Beans</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profiles.html">Profiles</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="application.html" aria-current="page">Apply</a></li>
+          <li><a href="links.html">Links</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main id="main" class="container">
+    <header class="page-head reveal">
+      <span class="eyebrow">Application</span>
+      <h1>Apply to Hot Beans</h1>
+      <p>Fill in each card below. You can drag the cards by their title bar to arrange the form however you like.</p>
+    </header>
 
+    <form id="application" novalidate>
+      <div class="board-toolbar">
+        <span id="drag-help">Drag a card by its title bar, or focus the title bar and use the arrow keys (hold Shift for bigger steps).</span>
+        <button type="button" class="button button--ghost" id="reset-layout">Reset layout</button>
+      </div>
 
+      <div class="board" id="board">
 
-</head>
+        <section class="card reveal" data-span="7" id="card-name" aria-labelledby="h-name">
+          <div class="card-head" tabindex="0" aria-describedby="drag-help">
+            <span class="grip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            <h2 id="h-name">Name</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="field">
+                <label for="fname">First name</label>
+                <input type="text" id="fname" name="fname" autocomplete="given-name" required>
+                <span class="error" id="fname-error"></span>
+              </div>
+              <div class="field">
+                <label for="mname">Middle name <span class="optional">(optional)</span></label>
+                <input type="text" id="mname" name="mname" autocomplete="additional-name">
+              </div>
+              <div class="field">
+                <label for="sname">Surname</label>
+                <input type="text" id="sname" name="sname" autocomplete="family-name" required>
+                <span class="error" id="sname-error"></span>
+              </div>
+            </div>
+          </div>
+        </section>
 
-<body style="background-color:#4d3626;text-align:center">
+        <section class="card reveal" data-span="5" id="card-job" aria-labelledby="h-job">
+          <div class="card-head" tabindex="0" aria-describedby="drag-help">
+            <span class="grip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            <h2 id="h-job">Job title</h2>
+          </div>
+          <div class="card-body">
+            <div class="field">
+              <label for="jobtitle">Choose a job</label>
+              <select id="jobtitle" name="jobtitle" required>
+                <option value="">Select a role…</option>
+                <option value="projectmanager">Project manager</option>
+                <option value="softwareengineer">Software engineer</option>
+                <option value="websitedeveloper">Web developer</option>
+              </select>
+              <span class="error" id="jobtitle-error"></span>
+            </div>
+          </div>
+        </section>
 
+        <section class="card reveal" data-span="4" id="card-birthday" aria-labelledby="h-birthday">
+          <div class="card-head" tabindex="0" aria-describedby="drag-help">
+            <span class="grip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            <h2 id="h-birthday">Birthday</h2>
+          </div>
+          <div class="card-body">
+            <div class="field">
+              <label for="birthday">Date of birth</label>
+              <input type="date" id="birthday" name="birthday" autocomplete="bday" required>
+              <span class="error" id="birthday-error"></span>
+            </div>
+          </div>
+        </section>
 
+        <section class="card reveal" data-span="8" id="card-contact" aria-labelledby="h-contact">
+          <div class="card-head" tabindex="0" aria-describedby="drag-help">
+            <span class="grip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            <h2 id="h-contact">Contact</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="field">
+                <label for="tel">Phone number</label>
+                <input type="tel" id="tel" name="tel" autocomplete="tel" required>
+                <span class="error" id="tel-error"></span>
+              </div>
+              <div class="field">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                <span class="error" id="email-error"></span>
+              </div>
+            </div>
+          </div>
+        </section>
 
-<div id="box7">
-<br><label for="birthday"></label>
-  <input type="date" id="birthday" name="birthday">
-  <input type="submit">
+        <section class="card reveal" data-span="12" id="card-address" aria-labelledby="h-address">
+          <div class="card-head" tabindex="0" aria-describedby="drag-help">
+            <span class="grip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            <h2 id="h-address">Address</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="field">
+                <label for="fline">Street address</label>
+                <input type="text" id="fline" name="fline" autocomplete="address-line1">
+              </div>
+              <div class="field">
+                <label for="sline">Street address line 2 <span class="optional">(optional)</span></label>
+                <input type="text" id="sline" name="sline" autocomplete="address-line2">
+              </div>
+              <div class="field">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" autocomplete="address-level2">
+              </div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="state">State / province</label>
+                <input type="text" id="state" name="state" autocomplete="address-level1">
+              </div>
+              <div class="field">
+                <label for="zipcode">Postal / zip code</label>
+                <input type="text" id="zipcode" name="zipcode" autocomplete="postal-code">
+              </div>
+              <div class="field">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" autocomplete="country-name">
+              </div>
+            </div>
+          </div>
+        </section>
 
-</div>
+        <section class="card reveal" data-span="12" id="card-cv" aria-labelledby="h-cv">
+          <div class="card-head" tabindex="0" aria-describedby="drag-help">
+            <span class="grip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            <h2 id="h-cv">CV</h2>
+          </div>
+          <div class="card-body">
+            <div class="drop-zone" tabindex="0" role="button" aria-label="Upload your CV">
+              <span class="drop-zone__prompt"><strong>Drop your CV here</strong> or click to browse</span>
+              <span class="drop-zone__hint">PDF, Word or image, up to 10 MB</span>
+              <input type="file" name="cv" class="drop-zone__input" accept=".pdf,.doc,.docx,image/*">
+            </div>
+          </div>
+        </section>
 
-<div id="box6">birthday</div>
+      </div>
 
-<div id="box9">
-<br>
-first name <input type="text" id="fname" name="fname">
-middle name <input type="text" id="mname" name="mname">
-surname <input type="text" id="sname" name="sname">
-</div>
+      <div class="form-footer">
+        <button type="submit" class="button">Submit application</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </main>
 
-<div id="box8">name</div>
-
-<div id="box11">
-<br>
-<label for="jobtitle">choose a job:</label>
-  <select name="cars" id="cars">
-    <option value="projectmanager">project manager</option>
-    <option value="softwareengineer">software engineer</option>
-    <option value="websitedeveloper">website developer</option>
-  </select>
-</div>
-
-<div id="box10">job title</div>
-
-<div id="box13">
-<br><form>
-  street address <input type="address" id="fline" name="fline">
-  street address line 2 <input type="address" id="sline" name="sline">
-  state/province <input type="address" id="state" name="provice">
-  postal/zipcode <input type="address" id="zipcode" name="zipcode">
-  <br>
-  country <input type="address" id="country" name="country">
-  city <input type="address" id="city" name="city">
-  
-</form></div>
-<div id="box12">address</div>
-
-<div id="box15">
-<br>
-phone number <input type="tel" id="tel" name="tel">
-email address <input type="email" id="fname" name="fname">
-</div>
-
-
-<div id="box14">contact</div>
-
-<div id="box17">
-<br>
-
-<div class="drop-zone">
-<span class="drop-zone__prompt">drop</span>
-<input type="file" name="myFile" class="drop-zone__input">
-</div>
-
-
-<div id="box16">cv</div>
-
-<button class="button">submit</button>
-
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span id="year">2026</span> Hot Beans</span>
+      <a href="jobs.html">&larr; Back to jobs</a>
+    </div>
+  </footer>
 </body>
-
-
-
 </html>

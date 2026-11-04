@@ -1,83 +1,80 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="css\style.css">
-<title>Hot beans</title>
-<div id="background">
-<style>
-body {
-  font-family: "null";
-}
-
-.sidenav {
-  width: 140;
-  position: fixed;
-  z-index: 1;
-  top: 350px;
-  left: 10px;
-  background: #6f4e37;
-  overflow-x: hidden;
-  padding: 8px 0;
-  text-align: center;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #37271b;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #000000;
-}
-
-.main {
-  margin-left: 140px; /* Same width as the sidebar + left position in px */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hot Beans — Links</title>
+  <meta name="description" content="Useful links from the Hot Beans team.">
+  <link rel="icon" href="images/hotbeanlogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="javascript/site.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<div class="sidenav">
-  <img src="images/hotbeanlogo.png" width="100" height="100">
-  <a href="index.html">home</a>
-  <a href="profiles.html">profiles</a>
-  <a href="jobs.html">jobs</a>
-  <a href="application.html">application</a>
-  <a href="links.html">links</a>
-</div>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html"><img src="images/hotbeanlogo.png" alt="" width="40" height="40">Hot Beans</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profiles.html">Profiles</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="application.html">Apply</a></li>
+          <li><a href="links.html" aria-current="page">Links</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main id="main" class="container">
+    <header class="page-head reveal">
+      <span class="eyebrow">Links</span>
+      <h1>Places we like</h1>
+      <p>Learning resources and friends of the studio. Each link opens in a new tab.</p>
+    </header>
 
+    <ul class="link-list">
+      <li class="reveal">
+        <a href="https://www.cisco.com/" target="_blank" rel="noopener">
+          <span class="name">Cisco</span>
+          <span class="desc">Networking courses and certifications.</span>
+          <span class="arrow" aria-hidden="true">&#8599;</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="https://www.khanacademy.org/" target="_blank" rel="noopener">
+          <span class="name">Khan Academy</span>
+          <span class="desc">Free lessons in computing, maths and more.</span>
+          <span class="arrow" aria-hidden="true">&#8599;</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="https://www.w3schools.com/" target="_blank" rel="noopener">
+          <span class="name">W3Schools</span>
+          <span class="desc">Quick HTML, CSS and JavaScript references.</span>
+          <span class="arrow" aria-hidden="true">&#8599;</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="https://www.instagram.com/london.flowershop/" target="_blank" rel="noopener">
+          <span class="name">London Flower Shop</span>
+          <span class="desc">A friend of the studio, on Instagram.</span>
+          <span class="arrow" aria-hidden="true">&#8599;</span>
+        </a>
+      </li>
+    </ul>
+  </main>
 
-
-</head>
-
-<body style="background-color:#4d3626;text-align:center">
-
-<div id="box18"><a href="https://www.cisco.com/" target="_blank">cisco</a></div>
-<div id="box19"><a href="https://www.cisco.com/" target="_blank">cisco cisco cisco cisco cisco cisco cisco cisco cisco cisco</a></div>
-
-
-<div id="box20"><a href="https://www.khanacademy.org/" target="_blank">khan academy</a></div>
-<div id="box21"><a href="https://www.khanacademy.org/" target="_blank">khan academy khan academy khan academy khan academy khan academy</a></div>
-
-<div id="box22"><a href="https://www.w3schools.com/" target="_blank">w3schools</a></div>
-<div id="box23"><a href="https://www.w3schools.com/" target="_blank">w3schools w3schools w3schools w3schools w3schools w3schools w3schools</a></div>
-
-<div id="box24"><a href="https://www.instagram.com/london.flowershop/" target="_blank">london flower shop</a></div>
-<div id="box25"><a href="https://www.instagram.com/london.flowershop/" target="_blank">london flower shop london flower shop london flower shop london flower shop london flower shop</a></div>
-
-
-
-
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span id="year">2026</span> Hot Beans</span>
+      <a href="application.html">Apply for a role &rarr;</a>
+    </div>
+  </footer>
 </body>
-
 </html>

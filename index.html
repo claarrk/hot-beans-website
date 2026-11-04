@@ -1,81 +1,60 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="css\style.css">
-<title>Hot beans</title>
-<div id="background">
-<style>
-body {
-  font-family: "null";
-}
-
-.sidenav {
-  width: 140;
-  position: fixed;
-  z-index: 1;
-  top: 350px;
-  left: 10px;
-  background: #6f4e37;
-  overflow-x: hidden;
-  padding: 8px 0;
-  text-align: center;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #37271b;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #000000;
-}
-
-.main {
-  margin-left: 140px; /* Same width as the sidebar + left position in px */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hot Beans — Home</title>
+  <meta name="description" content="Hot Beans is a small web development studio. Meet the team, see open roles and apply.">
+  <link rel="icon" href="images/hotbeanlogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="javascript/site.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<div class="sidenav">
-  <img src="images/hotbeanlogo.png" width="100" height="100">
-  <a href="index.html">home</a>
-  <a href="profiles.html">profiles</a>
-  <a href="jobs.html">jobs</a>
-  <a href="application.html">application</a>
-  <a href="links.html">links</a>
-</div>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html"><img src="images/hotbeanlogo.png" alt="" width="40" height="40">Hot Beans</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="profiles.html">Profiles</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="application.html">Apply</a></li>
+          <li><a href="links.html">Links</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main id="main">
+    <section class="container hero">
+      <div class="reveal">
+        <span class="eyebrow">Meet our CEO</span>
+        <h1>The CEO of <em>Hot Beans</em></h1>
+        <p>This is our much-loved CEO. They started Hot Beans with one laptop and a strong coffee habit, and still review every project that leaves the studio.</p>
+        <p>We build fast, friendly websites for small businesses, and we're always looking for people who care about the details.</p>
+        <div class="hero-actions">
+          <a class="button" href="jobs.html">See open roles</a>
+          <a class="button button--ghost" href="profiles.html">Meet the team</a>
+        </div>
+      </div>
+      <div class="hero-media reveal">
+        <img class="photo-main" src="images/bruh.jpg" alt="Portrait of the Hot Beans CEO" width="1080" height="1440">
+        <p class="photo-chip"><strong>Founder &amp; CEO</strong>Reviews every project before it ships.</p>
+      </div>
+    </section>
+  </main>
 
-
-
-</head>
-
-<body style="background-color:#4d3626;text-align:center">
-
-
-<div id="box1"></div>
-<div id="ceo1"><img src="images/bruh.jpg" width="300" height="400"></div>
-
-<div id="ceo2"><img src="images/bruh.jpg" width="600" height="250"></div>
-
-<div id="ceoTXT">ceo of<br>hot beans</div>
-
-<div id="ceoTXT2">This is our loving ceo of hot beans we love him so much. 
-This is our loving ceo of hot beans we love him so much. 
-This is our loving ceo of hot beans we love him so much. 
-This is our loving ceo of hot beans we love him so much. 
-This is our loving ceo of hot beans we love him so much. </div>
-
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span id="year">2026</span> Hot Beans</span>
+      <a href="application.html">Apply for a role &rarr;</a>
+    </div>
+  </footer>
 </body>
-
 </html>

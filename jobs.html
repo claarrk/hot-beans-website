@@ -1,121 +1,74 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="css\style.css">
-<title>Hot beans</title>
-<div id="background">
-<style>
-body {
-  font-family: "null";
-}
-
-.sidenav {
-  width: 140;
-  position: fixed;
-  z-index: 1;
-  top: 350px;
-  left: 10px;
-  background: #6f4e37;
-  overflow-x: hidden;
-  padding: 8px 0;
-  text-align: center;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #37271b;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #000000;
-}
-
-.main {
-  margin-left: 140px; /* Same width as the sidebar + left position in px */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hot Beans — Jobs</title>
+  <meta name="description" content="Open roles at Hot Beans.">
+  <link rel="icon" href="images/hotbeanlogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="javascript/site.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<div class="sidenav">
-  <img src="images/hotbeanlogo.png" width="100" height="100">
-  <a href="index.html">home</a>
-  <a href="profiles.html">profiles</a>
-  <a href="jobs.html">jobs</a>
-  <a href="application.html">application</a>
-  <a href="links.html">links</a>
-</div>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html"><img src="images/hotbeanlogo.png" alt="" width="40" height="40">Hot Beans</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profiles.html">Profiles</a></li>
+          <li><a href="jobs.html" aria-current="page">Jobs</a></li>
+          <li><a href="application.html">Apply</a></li>
+          <li><a href="links.html">Links</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main id="main" class="container">
+    <header class="page-head reveal">
+      <span class="eyebrow">Open roles</span>
+      <h1>Work at Hot Beans</h1>
+      <p>Three roles open right now. All of them come with flexible hours and unlimited coffee.</p>
+    </header>
 
+    <div class="jobs">
+      <article class="job reveal">
+        <div class="meta"><span class="tag">Full time</span><span class="tag">Front end</span></div>
+        <h2>Web developer</h2>
+        <p>Job description. Build and maintain client websites in HTML, CSS and JavaScript. Work with the design team to turn mock-ups into responsive, accessible pages.</p>
+        <p>Job description. Keep sites fast, test them across browsers and devices, and help clients update their content after launch.</p>
+        <a class="button" href="application.html?job=websitedeveloper">Apply for this role</a>
+      </article>
 
+      <article class="job reveal">
+        <div class="meta"><span class="tag">Full time</span><span class="tag">Back end</span></div>
+        <h2>Software engineer</h2>
+        <p>Job description. Design and run the services behind our sites: hosting, databases, form handling and integrations with third-party tools.</p>
+        <a class="button" href="application.html?job=softwareengineer">Apply for this role</a>
+      </article>
 
-</head>
+      <article class="job reveal">
+        <div class="meta"><span class="tag">Full time</span><span class="tag">Delivery</span></div>
+        <h2>Project manager</h2>
+        <p>Job description. Plan each project from first call to launch, keep clients informed, and make sure the team has what it needs to ship on time.</p>
+        <p>Job description. Run weekly check-ins, track scope and budget, and write the handover notes clients actually read.</p>
+        <a class="button" href="application.html?job=projectmanager">Apply for this role</a>
+      </article>
+    </div>
+  </main>
 
-<body style="background-color:#4d3626;text-align:center">
-
-<div id="box4"></div>
-
-<div id="box5"></div>
-
-<div id="boxUP1"></div>
-
-<div id="boxDOWN1"></div>
-
-<div id="boxUP2"></div>
-
-<div id="boxDOWN2"></div>
-
-<div id="ceoTXT7">hot beans   web<br>developer</div>
-
-<div id="ceoTXT8">job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br></div>
-
-<div id="ceoTXT9">job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br></div>
-
-<div id="ceoTXT10">hot beans   software<br>engineer</div>
-
-<div id="ceoTXT11">job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-</div>
-
-<div id="ceoTXT12">hot beans   job<br>moment</div>
-
-<div id="ceoTXT13">job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br>
-job description. job description. job description. job description. <br></div>
-
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span id="year">2026</span> Hot Beans</span>
+      <a href="application.html">Apply for a role &rarr;</a>
+    </div>
+  </footer>
 </body>
-
 </html>

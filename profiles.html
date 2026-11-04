@@ -1,105 +1,71 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="css\style.css">
-<title>Hot beans</title>
-<div id="background">
-<style>
-body {
-  font-family: "null";
-}
-
-.sidenav {
-  width: 140;
-  position: fixed;
-  z-index: 1;
-  top: 350px;
-  left: 10px;
-  background: #6f4e37;
-  overflow-x: hidden;
-  padding: 8px 0;
-  text-align: center;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #37271b;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #000000;
-}
-
-.main {
-  margin-left: 140px; /* Same width as the sidebar + left position in px */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hot Beans — Profiles</title>
+  <meta name="description" content="Meet the people behind Hot Beans.">
+  <link rel="icon" href="images/hotbeanlogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="javascript/site.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<div class="sidenav">
-  <img src="images/hotbeanlogo.png" width="100" height="100">
-  <a href="index.html">home</a>
-  <a href="profiles.html">profiles</a>
-  <a href="jobs.html">jobs</a>
-  <a href="application.html">application</a>
-  <a href="links.html">links</a>
-</div>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html"><img src="images/hotbeanlogo.png" alt="" width="40" height="40">Hot Beans</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profiles.html" aria-current="page">Profiles</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="application.html">Apply</a></li>
+          <li><a href="links.html">Links</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main id="main" class="container">
+    <header class="page-head reveal">
+      <span class="eyebrow">The team</span>
+      <h1>The people behind the beans</h1>
+      <p>A small team that ships together, reviews each other's work and shares one very busy coffee machine.</p>
+    </header>
 
+    <div class="profiles">
+      <article class="profile reveal">
+        <img class="profile-photo" src="images/ye.png" alt="Portrait of the Hot Beans software engineer" width="851" height="1079">
+        <div>
+          <h2>Software engineer</h2>
+          <span class="role">Hot Beans engineering</span>
+          <p>This is our much-loved software engineer. They look after the back end of every site we build, from hosting and databases to the forms that land in your inbox.</p>
+          <p>When something breaks at 2am, they're the one who already knows why.</p>
+        </div>
+      </article>
 
+      <article class="profile reveal">
+        <img class="profile-photo" src="images/hot beans2.png" alt="Portrait of the Hot Beans web developer" width="576" height="720">
+        <div>
+          <h2>Web developer</h2>
+          <span class="role">Hot Beans front end</span>
+          <p>This is our much-loved web developer. They turn designs into pages that load quickly, work on every screen size and are usable with a keyboard.</p>
+          <p>Ask them about CSS grid and set aside an hour.</p>
+        </div>
+      </article>
+    </div>
+  </main>
 
-</head>
-
-<body style="background-color:#4d3626;text-align:center">
-
-
-
-<div id="box3"></div>
-
-<div id="ceoTXT5">This is our loving hot beans web developer we love him so much. 
-This is our loving hot beans web developer we love him so much. 
-This is our loving hot beans web developer we love him so much. 
-This is our loving hot beans web developer we love him so much. 
-This is our loving hot beans web developer we love him so much. 
-This is our loving hot beans web developer we love him so much. 
-This is our loving hot beans web developer we love him so much. 
-This is our loving hot beans web developer we love him so much. </div>
-
-<div id="box2"></div>
-
-
-
-<div id="employee1"><img src="images/ye.png	" width="240" height="240"></div>
-
-
-
-<div id="ceoTXT3">hot beans   software<br>engineer</div>
-
-<div id="ceoTXT4">This is our loving hot beans software engineer we love him so much. 
-This is our loving hot beans software engineer we love him so much. 
-This is our loving hot beans software engineer we love him so much. 
-This is our loving hot beans software engineer we love him so much. 
-This is our loving hot beans software engineer we love him so much. 
-This is our loving hot beans software engineer we love him so much. 
-This is our loving hot beans software engineer we love him so much. 
-This is our loving hot beans software engineer we love him so much. </div>
-
-
-
-<div id="employee2"><img src="images/hot beans2.png	" width="240" height="240"></div>
-
-<div id="ceoTXT6">hot beans   web<br>developer</div>
-
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span id="year">2026</span> Hot Beans</span>
+      <a href="application.html">Apply for a role &rarr;</a>
+    </div>
+  </footer>
 </body>
-
 </html>
